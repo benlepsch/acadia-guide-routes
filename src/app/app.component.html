@@ -19,14 +19,14 @@
   <li  *ngFor="let r of routes[selected_area]">
       <strong>{{ r.name }} ({{ r.grade }})</strong>
       <br>
-      <!-- {{ r.site }} managed <br>
-      40m rope: {{ r.fortym }} <br> -->
+      
       <div *ngFor="let p of r.pic">
         <img src="{{ base_url + p }}"><br>
       </div>
+
+      <app-modal [name]="r.name" [base_url]="base_url" [pics]="r.anchor"></app-modal>
       <br>
-      <div>Anchor Pics</div>
-      <br>
+
       Beta: {{ r.beta }}
   </li>
 </ul>
