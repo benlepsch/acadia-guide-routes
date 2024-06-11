@@ -17,13 +17,16 @@
 
 <ul>
   <li  *ngFor="let r of routes[selected_area]">
-      {{ r.name }} ({{ r.grade }}) <br>
-      {{ r.site }} managed <br>
-      40m rope: {{ r.fortym }} <br>
-      <div *ngFor="let p of r.anchor">
+      <strong>{{ r.name }} ({{ r.grade }})</strong>
+      <br>
+      <!-- {{ r.site }} managed <br>
+      40m rope: {{ r.fortym }} <br> -->
+      <div *ngFor="let p of r.pic">
         <img src="{{ base_url + p }}"><br>
       </div>
       <br>
-      beta: {{ r.beta }}
+      <div>Anchor Pics</div>
+      <br>
+      Beta: {{ r.beta }}
   </li>
 </ul>
