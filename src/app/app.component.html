@@ -20,7 +20,10 @@
       {{ r.name }} ({{ r.grade }}) <br>
       {{ r.site }} managed <br>
       40m rope: {{ r.fortym }} <br>
-      picture? <br>
+      <div *ngFor="let p of r.anchor">
+        <img src="{{ base_url + p }}"><br>
+      </div>
+      <br>
       beta: {{ r.beta }}
   </li>
 </ul>
