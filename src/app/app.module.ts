@@ -7,12 +7,14 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ModalComponent } from './modal/modal.component';
+import { AnchorModalComponent } from './anchor-modal/anchor-modal.component';
+import { BetaModalComponent } from './beta-modal/beta-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ModalComponent
+    AnchorModalComponent,
+    BetaModalComponent
   ],
   imports: [
     BrowserModule,

@@ -20,13 +20,14 @@
       <strong>{{ r.name }} ({{ r.grade }})</strong>
       <br>
       
+      <div *ngIf="r.pic.length == 0">
+        <p>no picture for this one</p>
+      </div>
       <div *ngFor="let p of r.pic">
         <img src="{{ base_url + p }}"><br>
       </div>
 
-      <app-modal [name]="r.name" [base_url]="base_url" [pics]="r.anchor"></app-modal>
-      <br>
-
-      Beta: {{ r.beta }}
+      <app-anchor-modal class="modal-button" [name]="r.name" [base_url]="base_url" [pics]="r.anchor"></app-anchor-modal>
+      <app-beta-modal class="modal-button" [name]="r.name" [beta]="r.beta"></app-beta-modal>
   </li>
 </ul>

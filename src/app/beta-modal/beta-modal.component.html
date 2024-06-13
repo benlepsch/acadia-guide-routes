@@ -1,7 +1,7 @@
 <button
   type="button"
   class="btn btn-primary"
-  (click)="openPopup()">Anchor Setup
+  (click)="openPopup()">View Beta
 </button> 
 
 <div
@@ -12,11 +12,10 @@
   <div class="modal-dialog" role="document"> 
     <div class="modal-content"> 
       <div class="modal-header"> 
-        <h4 class="modal-title">Anchor Setup for {{name}}</h4> 
+        <h4 class="modal-title">Beta for {{name}}</h4> 
       </div> 
-      <div class="modal-body" *ngFor="let a of pics"> 
-        <img class="inmodal" src="{{ base_url + a }}">
-  
+      <div class="modal-body"> 
+        {{beta}}
       </div> 
       <div class="modal-footer"> 
         <button type="button" class="btn btn-danger" 
