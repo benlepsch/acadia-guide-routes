@@ -9,12 +9,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AnchorModalComponent } from './anchor-modal/anchor-modal.component';
 import { BetaModalComponent } from './beta-modal/beta-modal.component';
+import { PicModalComponent } from './pic-modal/pic-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AnchorModalComponent,
-    BetaModalComponent
+    BetaModalComponent,
+    PicModalComponent
   ],
   imports: [
     BrowserModule,
