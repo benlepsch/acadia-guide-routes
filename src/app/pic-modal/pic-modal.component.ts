@@ -10,6 +10,7 @@ export class PicModalComponent {
   @Input() name!: string;
   @Input() base_url!: string;
   @Input() pics!: string;
+  @Input() ptext!: string;
 
   constructor() {} 
   

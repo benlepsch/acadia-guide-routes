@@ -3,6 +3,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClient } from '@angular/common/http';
 
 import { RoutefetchService } from './routefetch.service';
+import { debounceTime } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -29,6 +30,18 @@ export class AppComponent {
   }
 
   receiveData(d: any) : void {
+    for (let key of Object.keys(d)) {
+      for (let r of d[key]) {
+        if (!("pic_txt" in r)) {
+          r["pic_txt"] = "";
+        }
+
+        if (!("anchor_txt" in r)) {
+          r["anchor_txt"] = "";
+        }
+      }
+    }
+
     this.routes = d;
     // console.log(d);
   }

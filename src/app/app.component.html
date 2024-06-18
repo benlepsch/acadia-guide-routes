@@ -5,6 +5,7 @@
       <option value="south_otter">South Otter</option>
       <option value="ocean_drive">Ocean Drive</option>
       <option value="cooksey_drive">Cooksey Drive</option>
+      <option value="canyon_cliffs">Canyon Cliffs</option>
       <option value="south_wall">South Wall</option>
       <option value="great_head">Great Head</option>
       <option value="south_bubs">South Bubble</option>
@@ -21,8 +22,8 @@
       <br>
       
       
-      <app-pic-modal class="modal-button" [name]="r.name" [base_url]="base_url" [pics]="r.pic"></app-pic-modal>
-      <app-anchor-modal class="modal-button" [name]="r.name" [base_url]="base_url" [pics]="r.anchor"></app-anchor-modal>
+      <app-pic-modal class="modal-button" [name]="r.name" [base_url]="base_url" [pics]="r.pic" [ptext]="r.pic_txt"></app-pic-modal>
+      <app-anchor-modal class="modal-button" [name]="r.name" [base_url]="base_url" [pics]="r.anchor" [ptext]="r.anchor_txt"></app-anchor-modal>
       <app-beta-modal class="modal-button" [name]="r.name" [beta]="r.beta"></app-beta-modal>
   </li>
 </ul>

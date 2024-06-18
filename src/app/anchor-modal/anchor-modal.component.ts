@@ -10,6 +10,7 @@ export class AnchorModalComponent {
   @Input() name!: string;
   @Input() base_url!: string;
   @Input() pics!: Array<string>;
+  @Input() ptext!: string;
 
   constructor() {} 
   
