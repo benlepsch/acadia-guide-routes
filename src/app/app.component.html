@@ -16,14 +16,23 @@
 
 <hr>
 
-<ul>
-  <li  *ngFor="let r of routes[selected_area]">
-      <strong>{{ r.name }} ({{ r.grade }})</strong>
-      <br>
-      
-      
-      <app-pic-modal class="modal-button" [name]="r.name" [base_url]="base_url" [pics]="r.pic" [ptext]="r.pic_txt"></app-pic-modal>
-      <app-anchor-modal class="modal-button" [name]="r.name" [base_url]="base_url" [pics]="r.anchor" [ptext]="r.anchor_txt"></app-anchor-modal>
-      <app-beta-modal class="modal-button" [name]="r.name" [beta]="r.beta"></app-beta-modal>
+<ul *ngFor="let r of routes[selected_area]">
+
+  <!-- area label -->
+  <li class="area-label" *ngIf="r.hasOwnProperty('isArea')">
+    <br>
+    <strong>{{ r.name }}</strong>
+    <hr>
+  </li>
+
+  <!-- route description -->
+  <li *ngIf="r.hasOwnProperty('grade')">
+    {{ r.name }} ({{ r.grade }})
+    <br>
+    
+    
+    <app-pic-modal class="modal-button" [name]="r.name" [base_url]="base_url" [pics]="r.pic" [ptext]="r.pic_txt"></app-pic-modal>
+    <app-anchor-modal class="modal-button" [name]="r.name" [base_url]="base_url" [pics]="r.anchor" [ptext]="r.anchor_txt"></app-anchor-modal>
+    <app-beta-modal class="modal-button" [name]="r.name" [beta]="r.beta"></app-beta-modal>
   </li>
 </ul>
