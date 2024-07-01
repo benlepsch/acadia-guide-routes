@@ -20,7 +20,7 @@ export class AppComponent {
               private http: HttpClient) {
     this.fetcher = new RoutefetchService(this.http);
     
-    this.base_url = 'https://benlepsch.github.io/agr/';
+    this.base_url = '';//'https://benlepsch.github.io/agr/';
 
     this.fetcher.getRoutes(this.receiveData.bind(this));
   }
@@ -30,6 +30,7 @@ export class AppComponent {
   }
 
   receiveData(d: any) : void {
+    let printed:boolean = false;
     for (let key of Object.keys(d)) {
       for (let r of d[key]) {
         if (!("pic_txt" in r)) {
@@ -39,6 +40,10 @@ export class AppComponent {
         if (!("anchor_txt" in r)) {
           r["anchor_txt"] = "";
         }
+      }
+      if (!printed && key == 'south_wall') {
+        console.log(d[key]);
+        printed = true;
       }
     }
 
