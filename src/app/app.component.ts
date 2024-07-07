@@ -41,7 +41,7 @@ export class AppComponent {
           r["anchor_txt"] = "";
         }
       }
-      if (!printed && key == 'south_wall') {
+      if (!printed && (key == 'south_wall' || key == 'otter_cliffs')) {
         console.log(d[key]);
         printed = true;
       }
